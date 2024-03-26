@@ -1,0 +1,263 @@
+/* pages/sub_page/training/training.wxss */
+.container {
+    height: 100vh;
+    .title {
+      font-weight: 500;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .icon {
+        margin: 0 4pt 0 10pt;
+        height: 14pt;
+        width: 14pt;
+      }
+    }
+    .head {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin: 16pt 0;
+      .title {
+        display: block;
+        font-size: 18pt;
+        font-weight: 700;
+      }
+    }
+    .map {
+      width: 100%;
+      border-radius: 24pt;
+      overflow: hidden;
+      height: 200pt;
+      .button {
+          top: calc(100% - 36pt);
+          right: calc(-100% + 36pt);
+          height: 0;
+          width: 0;
+          position: relative;
+          z-index: 2;
+          .icon {
+            height: 16pt;
+            width: 16pt;
+            background-color: rgba($color: #121212, $alpha: 0.6);
+            z-index: 2;
+            padding: 5pt;
+            border-radius: 18pt;
+          }
+      }
+    }
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      margin: 16pt 0 4pt 0;
+      .text {
+        margin: 1pt 0;
+        font-size: 14pt;
+        font-weight: 500;
+      }
+      .status {
+        height: 18pt;
+        line-height: 18pt;
+        padding: 2pt 8pt;
+        margin: 6pt 0;
+        border-radius: 10pt;
+        background-color: #65D46E;
+        color: #121212;
+        font-size: 11pt;
+        font-weight: 500;
+      }
+    }
+    .description {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      .content {
+        max-width: 64vw;
+        margin: 12pt 0;
+        padding: 20pt 0pt 20pt 20pt;
+        background-color: rgba($color: #A8A8A8, $alpha: 0.1);
+        border-radius: 16pt;
+        font-size: 10pt;
+        .icon {
+            position: relative;
+            top: -30pt;
+            right: 0pt;
+            height: 20pt;
+            width: 20pt;
+            z-index: 1;
+            float: right;
+          //   transform: scaleX(-1);
+        }
+      }
+    }
+    .plan {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      .content {
+        max-width: 64vw;
+        margin: 12pt 0;
+        padding: 20pt 0pt 20pt 20pt;
+        background-color: rgba($color: #A8A8A8, $alpha: 0.1);
+        border-radius: 16pt;
+        font-size: 10pt;
+        .icon {
+            position: relative;
+            top: -30pt;
+            right: 0pt;
+            height: 20pt;
+            width: 20pt;
+            z-index: 1;
+            float: right;
+          //   transform: scaleX(-1);
+        }
+        .file {
+          line-height: 24pt;
+          display: flex;
+          align-items: center;
+          .surface {
+            height: 24pt;
+            width: 24pt;
+          }
+          .text {
+            margin-left: 4pt;
+          }
+        }
+      }
+    }
+    .participant {
+      margin-top: 16pt;
+      padding-bottom: 20pt;
+      .person {
+        margin-bottom: 10pt;
+        height: 32pt;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .avatar {
+          height: 32pt;
+          width: 32pt;
+          border-radius: 16pt;
+        }
+        .name {
+          height: 32pt;
+          line-height: 32pt;
+          padding: 0 8pt;
+        }
+        .tag {
+            margin: 0 2pt;
+            padding: 2pt 8pt;
+            height: 14pt;
+            line-height: 14pt;
+            font-size: 8pt;
+            border-radius: 10pt;
+            background-color: #223261;
+        }
+      }
+    }
+    .comment {
+        margin-top: 16pt;
+        .item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16pt;
+            .message {
+                display: flex;
+                align-items: flex-start;
+                .avatar {
+                    height: 32pt;
+                    width: 32pt;
+                    border-radius: 16pt;
+                }
+                .content {
+                    margin: 0 8pt;
+                    .text {
+                        max-width: 50vw;
+                        padding: 8pt;
+                        background-color: rgba($color: #A8A8A8, $alpha: 0.1);;
+                        border-radius: 4pt;
+                        font-size: 10pt;
+                        margin-top: 8pt;
+                    }
+                }
+            }
+        }
+        .send-bar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 24pt;
+            .input {
+                height: 28pt;
+                flex: 1;
+                background-color: rgba($color: #A8A8A8, $alpha: 0.1);
+                border-radius: 12pt;
+                padding: 0 8pt;
+            }
+            .button {
+                margin: 0 4pt 0 8pt;
+                height: 28pt;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .icon {
+                    height: 18pt;
+                    width: 18pt;
+                }
+            }
+            
+        }
+    }
+  }
+
+  .button-bar {
+    height: 48pt;
+    width: calc(100% - 20pt);
+    margin-top: 10pt;
+    padding: 0 10pt;
+    // position: fixed;
+    border-radius: 18pt;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2pt 6pt #0C0C0C;
+    .button {
+        height: 28pt;
+        width: 28pt;
+        padding: 4pt;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .icon {
+            height: 18pt;
+            width: 18pt;
+        }
+        .text {
+            font-size: 7pt;
+        }
+    }
+    .button-main {
+        font-size: 11pt;
+        font-weight: 500;
+        background-color: #65D46E;
+        color: #121212;
+        height: 28pt;
+        width: 112pt;
+        line-height: 28pt;
+        border-radius: 12pt;
+        text-align: center;
+    }
+  }
+  
+  .bottom-placeholder {
+    height: 88pt;
+    width: 100%;
+  }

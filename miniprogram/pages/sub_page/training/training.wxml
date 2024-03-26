@@ -1,0 +1,129 @@
+<scroll-view class="container" 
+  show-scrollbar="{{ false }}" 
+  enhanced="{{ true }}" 
+  scroll-y="true">
+  <view class="head">
+    <view class="title">
+        <view class="text">龙井虾仁</view>
+        <view class="text">2024Tryout</view>
+    </view>
+  </view>
+  <view class="map">
+    <view class="button">
+      <image class="icon" src="/images/icon/training/expend.png" bindtap="navigateToMap"></image>
+    </view>
+    <!-- <map id="map" scale="14" show-location="true" ></map> -->
+    <map id="map" 
+      markers="{{ markers }}"
+      longitude="{{ markers[0].longitude }}" 
+      latitude="{{ markers[0].latitude }}"
+      enable-zoom="{{ false }}"
+      enable-scroll="{{ false }}"
+      layer-style="1">
+    </map>
+  </view>
+  <view class="info">
+    <view class="text">2023年8月14 9:00 ~ 11:00</view>
+    <view class="text">杭州 · 云上足球公园</view>
+    <view class="text">60 元 / 人</view>
+    <view class="text">龙井虾仁</view>
+    <view class="status">进行中</view>
+  </view>
+  <view class="description">
+    <view class="placeholder"></view>
+    <view class="content">
+      <image class="icon" src="/images/icon/training/pin.png"></image>
+      训练地点在计量东操场🎄 平安夜满足下沙男大心愿
+    </view>
+  </view>
+  <view class="plan">
+    <view class="placeholder"></view>
+    <view class="content">
+      <image class="icon" src="/images/icon/training/pin.png"></image>
+      <view class="file">
+        <image class="surface" src="/images/icon/training/word_file.png"></image>
+        <view class="text">训练计划.docx</view>
+      </view>
+    </view>
+  </view>
+  <view style="height: 48pt;" class="space-splite"></view>
+  <view class="title">
+    <view class="text">参训人员</view>
+    <image class="icon" src="/images/icon/training/female.png"></image>
+    <view class="text">12</view>
+    <image class="icon" src="/images/icon/training/male.png"></image>
+    <view class="text">12</view>
+  </view>
+  <view class="participant">
+    <view class="person">
+      <image class="avatar" src="/images/avatar.jpg"></image>
+      <view class="name">Kevinavy</view>
+      <view class="tag">正式队员</view>
+      <view class="tag">Line Black</view>
+    </view>
+    <view class="person">
+      <image class="avatar" src="/images/avatar.jpg"></image>
+      <view class="name">Kevinavy</view>
+      <view class="tag">跟训队员</view>
+      <view class="tag">Line White</view>
+    </view>
+  </view>
+  <view class="title">
+    <view class="text">训练反馈</view>
+  </view>
+  <view class="comment">
+    <view class="item">
+        <view class="message">
+            <image class="avatar" src="/images/avatar.jpg"></image>
+            <view class="content">
+                <view class="name">Kevinavy</view>
+                <view class="text">打的不错</view>
+            </view>
+        </view>
+    </view>
+    <view class="item">
+        <view class="placeholder"></view>
+        <view class="message">
+            <view class="content">
+                <view class="name" style="text-align: right;">Kevinavy</view>
+                <view class="text">打的不错打的不错打的不错打的不错打的不错打的不错打的不错打的不错打的不错</view>
+            </view>
+            <image class="avatar" src="/images/avatar.jpg"></image>
+        </view>
+    </view>
+    <view class="item">
+        <view class="message">
+            <image class="avatar" src="/images/avatar.jpg"></image>
+            <view class="content">
+                <view class="name">Kevinavy</view>
+                <view class="text">打的不错打的不错打的不错打的不错打的不错打的不错打的不错打的不错打的不错</view>
+            </view>
+        </view>
+    </view>
+    <view class="send-bar">
+        <input class="input"></input>
+        <view class="button">
+            <image class="icon" src="/images/icon/training/send.png"></image>
+        </view>
+    </view>
+  </view>
+  <view class="button-bar" style="bottom: {{ safeArea }}px;">
+    <view class="button">
+        <image class="icon" src="/images/icon/training/info.png"></image>
+        <view class="text">帮助</view>
+    </view>
+    <view class="button">
+        <image class="icon" src="/images/icon/training/share.png"></image>
+        <view class="text">分享</view>
+    </view>
+    <view class="button">
+        <image class="icon" src="/images/icon/training/audit.png"></image>
+        <view class="text">请假</view>
+    </view>
+    <view class="placeholder"></view>
+    <view class="button-main">立即报名</view>
+  </view>
+  <view class="bottom-placeholder" style="height: {{ safeArea }}px;"></view>
+</scroll-view>
+
+

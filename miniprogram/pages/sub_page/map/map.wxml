@@ -1,0 +1,15 @@
+<view class="head" style="top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
+  <view class="button" 
+  style="height: {{ capsuleMenuHeight }}px; width: {{ capsuleMenuHeight }}px;"
+  bindtap="navigateBack">
+    <image class="icon" src="/images/icon/map/back.png"></image>
+  </view>
+</view>
+<view class="map">
+    <map id="map" 
+      markers="{{ markers }}"
+      longitude="{{ markers[0].longitude }}" 
+      latitude="{{ markers[0].latitude }}"
+      layer-style="1">
+    </map>
+</view>

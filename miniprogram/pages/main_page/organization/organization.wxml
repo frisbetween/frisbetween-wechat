@@ -1,0 +1,80 @@
+<view class="navigation-bar" 
+  style="padding-top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
+  <image class="avatar" 
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/images/avatar.jpg"></image>
+  <view class="nickname" 
+    style="height: {{ navigationBarHeight }}px;">
+      龙井虾仁
+  </view>
+  <view class="button" 
+    style="height: {{ navigationBarHeight }}px;">
+    <image class="icon" src="/images/icon/organization/search.png"></image>
+  </view>
+  <view class="button" 
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;">
+  </view>
+</view>
+
+<view class="container"
+  style="height: calc(100vh - {{ navigationBarHeight + statusBarHeight }}px); margin-top: calc({{ navigationBarHeight + statusBarHeight }}px)">
+  <view class="title">
+    <view class="text">近期活动</view>
+    <view class="placeholder"></view>
+    <image class="icon" src="/images/icon/organization/more.png"></image>
+  </view>
+  <scroll-view class="training" 
+    show-scrollbar="{{ false }}" 
+    enhanced="{{ true }}"
+    scroll-x="true">
+    <view class="item"
+      wx:for="{{ training }}" 
+      wx:key="index">
+      <image mode="heightFix" class="surface" src="{{ item.surface }}">
+        <view class="info">
+          <view class="title">{{ item.title }}</view>
+          <view class="time">{{ item.date }} · {{ item.startTime }}</view>
+        </view>
+      </image>
+    </view>
+  </scroll-view>
+  <view class="title">
+    <view class="text">计划赛事</view>
+    <view class="placeholder"></view>
+    <image class="icon" src="/images/icon/organization/more.png"></image>
+  </view>
+  <scroll-view class="competition" 
+    show-scrollbar="{{ false }}" 
+    enhanced="{{ true }}"
+    scroll-x="true">
+    <view class="item"
+      wx:for="{{ competition }}" 
+      wx:key="index">
+      <image mode="heightFix" class="surface" src="{{ item.surface }}">
+        <view class="info">
+          <view class="title">{{ item.title }}</view>
+          <view class="time">{{ item.startDate }} - {{ item.endDate }}</view>
+          <view class="location">{{ item.location }}</view>
+        </view>
+      </image>
+    </view>
+  </scroll-view>
+  <view class="title">
+    <view class="text">功能列表</view>
+    <view class="placeholder"></view>
+    <image class="icon" src="/images/icon/organization/more.png"></image>
+  </view>
+  <scroll-view class="menu" 
+    show-scrollbar="{{ false }}" 
+    enhanced="{{ true }}"
+    scroll-x="true">
+    <view class="item"
+      wx:for="{{ menu }}" 
+      wx:key="index"
+      style="background-color: {{ item.background }};">
+      <view class="content">
+        <view class="title" >{{ item.title }}</view>
+        <image class="icon" src="{{ item.icon }}"></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>

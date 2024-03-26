@@ -1,0 +1,160 @@
+.navigation-bar {
+  width: calc(100% - 20pt);
+  background-color: #121212;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 20pt;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  .avatar {
+    border-radius: 50%;
+  }
+  .nickname {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10pt;
+    font-size: 16pt;
+    font-weight: 800;    
+  }
+}
+.sub-navigation-bar {
+  width: calc(100% - 20pt);
+  background-color: #121212;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 16pt 0 12pt 20pt;
+  position: fixed;
+  box-shadow: 0 2pt 6pt #0C0C0C;
+  .search-bar {
+    width: calc(100% - 20pt);
+    height: 24pt;
+    background-color: rgba($color: #A8A8A8, $alpha: 0.1);
+    border-radius: 8pt;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .icon {
+      height: 14pt;
+      width: 14pt;
+      margin-right: 10pt;
+    }
+  }
+}
+.container {
+  // padding-top: 12pt;
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    .icon {
+      height: 18pt;
+      width: 18pt;
+    }
+    .location {
+      height: 15pt;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2pt 4pt 1pt 6pt;
+      .icon {
+        height: 12pt;
+        width: 12pt;
+      }
+      .text {
+        padding: 1pt 0 0 1pt;
+        height: 12pt;
+        font-weight: 400;
+        line-height: 12pt;
+        margin-left: 1pt;
+        font-size: 10pt;
+        color: #A8A8A8;
+      }
+    }
+    
+  }
+  .field {
+    padding-top: 20pt;
+    // padding: 8pt 0;
+    // background-color: aquamarine;
+    width: 100%;
+    height: 96pt;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12pt 0;
+    .item {
+      width: 64pt;
+      height: 40pt;
+      background-color: rgb(214, 52, 53);
+      padding: 4pt 8pt;
+      border-radius: 8pt;
+      .text {
+        font-weight: 500;
+      }
+      .icon {
+        height: 24pt;
+        width: 24pt;
+        transform: translateX(40pt);
+      }
+    }
+  }
+  .competition {
+    .item {
+      margin-top: 16pt;
+      margin-bottom: 28pt;
+      .surface {
+        width: 100%;
+        border-radius: 8pt;
+      }
+      .info {
+        .title {
+          margin-top: 8pt;
+          margin-bottom: 4pt;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height: 16pt;
+          .text {
+            font-weight: 500;
+          }
+          .tag {
+            height: 16pt;
+            line-height: 16pt;
+            text-align: center;
+            padding: 0 8pt;
+            border-radius: 8pt;
+            background-color: #65D46E;
+            color: #121212;
+            font-size: 10pt;
+            
+          }
+        }
+        .msg {
+          display: flex;
+          align-items: center;
+          font-size: 10pt;
+          margin-bottom: 4pt;
+          .icon {
+            height: 12pt;
+            width: 12pt;
+            margin-right: 4pt;
+            border-radius: 6pt;
+          }
+        }
+      }
+    }
+  }
+  .bottom-placeholder {
+    height: 52pt;
+    width: 100%;
+  }
+}

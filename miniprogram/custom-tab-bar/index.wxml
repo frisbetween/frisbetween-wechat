@@ -1,0 +1,16 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<view class="tab-bar" style="padding-bottom: {{ safeArea }}px;">
+  <view class="tab" 
+    wx:for="{{ menu }}" 
+    wx:key="index" 
+    data-path="{{ item.pagePath }}" 
+    data-index="{{ index }}" 
+    bindtap="switchTab">
+      <image class="icon {{ selected === index ? 'scale' : ''}}" 
+        src="{{ selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+      <view class="title {{ selected === index ? 'scale' : ''}}" 
+      style="color: {{selected === index ? selectedColor : color}}">
+        {{item.text}}
+      </view>
+  </view>
+</view>

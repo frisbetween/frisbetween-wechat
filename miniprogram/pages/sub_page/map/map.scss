@@ -1,0 +1,31 @@
+/* pages/sub_page/map/map.wxss */
+.map {
+    height: 100vh;
+    width: 100vw;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 10pt;
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #000000, $alpha: 0.16);
+    border-radius: 100pt;
+    margin-left: 8pt;
+    .icon {
+      height: 90%;
+      width: 90%;
+      transform: translateX(-1pt);
+    }
+  }
+}

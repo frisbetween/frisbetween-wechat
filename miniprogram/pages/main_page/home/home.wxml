@@ -1,0 +1,150 @@
+<view class="navigation-bar" 
+  style="padding-top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
+  <image class="avatar" 
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/images/avatar.jpg"></image>
+  <view class="nickname" 
+    style="height: {{ navigationBarHeight }}px;">
+      Kevinavy
+  </view>
+</view>
+<view class="sub-navigation-bar" style="top: {{ navigationBarHeight + statusBarHeight }}px; height: {{ subNavigationBarHeight }}pt;">
+  <view class="tag-button {{ selected === item.index ? 'button-selected' : ''}}"
+    wx:for="{{ tagButton }}" 
+    wx:key="index" 
+    style="{{ item.translateX }};{{ selected === item.index ? item.animation : ''}}"
+    data-index="{{ index }}"
+    bindtap="onTagButtonTap">{{ item.text }}</view>
+  <view class="icon-button {{ selected === item.index ? 'button-selected' : ''}}" 
+    wx:for="{{ iconButton }}" 
+    wx:key="index" 
+    style="{{ item.translateX }};{{ selected === item.index ? item.animation : ''}}"
+    data-index="{{ index }}"
+    bindtap="onIconButtonTap">
+    <image class="icon" src="{{ selected === item.index ? item.selectedIconPath : item.iconPath }}"></image>
+  </view>
+</view>
+
+<scroll-view id="container" class="container" 
+  scroll-top="{{ containerScrollTop }}"
+  show-scrollbar="{{ false }}" 
+  enhanced="{{ true }}" 
+  scroll-y="true"
+  style="height: calc(100vh - {{ navigationBarHeight + statusBarHeight }}px - {{ subNavigationBarHeight + 28 }}pt); margin-top: calc({{ navigationBarHeight + statusBarHeight }}px + {{ subNavigationBarHeight + 28 }}pt); padding-bottom: {{ safeArea }}px">
+  <view class="training"
+    wx:if="{{ selected === 0 }}">
+    <view class="sort">
+      <image class="icon" 
+      src="{{ sort === 1 ? '/images/icon/home/desc.png' : '/images/icon/home/asc.png' }}"></image>
+      {{ sort === 1 ? '时间倒序' : '时间升序' }}
+    </view>
+    <view class="item" 
+      wx:for="{{ training }}" 
+      wx:key="index">
+      <image class="surface" src="{{ item.surface }}"></image>
+      <view class="info">
+        <view class="title">{{ item.title }}</view>
+        <view class="msg default">{{ item.date }} · {{ item.startTime }} - {{ item.endTime }}</view>
+        <view class="msg default">{{ item.location }}</view>
+      </view>
+    </view>
+  </view>
+  <view class="competition"
+    wx:if="{{ selected === 1 }}">
+    <view class="sort">
+      <image class="icon" 
+      src="{{ sort === 1 ? '/images/icon/home/desc.png' : '/images/icon/home/asc.png' }}"></image>
+      {{ sort === 1 ? '时间倒序' : '时间升序' }}
+    </view>
+    <view class="item" 
+      wx:for="{{ competition }}" 
+      wx:key="index" >
+      <image class="surface" mode="widthFix" src="{{ item.surface }}"></image>
+      <view class="info">
+        <view class="title">{{ item.title }}</view>
+        <view class="msg default">{{ item.startDate }} - {{ item.endDate }}</view>
+        <view class="msg default">{{ item.province + (item.city ? ' · ' + item.city : '' ) + (item.location ? ' · ' + item.location : '') }}</view>
+        <view class="msg default"></view>
+      </view>
+    </view>
+    
+  </view>
+  <view class="calendar"
+    wx:if="{{ selected === 3 }}">
+    <view class="month"
+      wx:for="{{ calendar }}" 
+      wx:for-item="monthObj"
+      wx:key="index">
+      <view class="head">
+        <view class="date">{{ monthObj.month.sun }}</view>
+        <view class="date">{{ monthObj.month.mon }}</view>
+        <view class="date">{{ monthObj.month.tue }}</view>
+        <view class="date">{{ monthObj.month.wed }}</view>
+        <view class="date">{{ monthObj.month.thu }}</view>
+        <view class="date">{{ monthObj.month.fri }}</view>
+        <view class="date">{{ monthObj.month.sat }}</view>
+      </view>
+      <view class="week"
+        wx:for="{{ monthObj.week }}" 
+        wx:for-item="dayObj"
+        wx:key="index">
+        <view class="date weekend" bindtap="openCalenderDrawler" data-activity="{{ dayObj.sun.activity }}">
+          <view class="text {{ dayObj.sun.today ? 'today' : '' }}">{{ dayObj.sun.date }}</view>
+          <view class="dot {{ dayObj.sun.activity ? 'activity' : '' }} "></view>
+        </view>
+        <view class="date" bindtap="openCalenderDrawler" data-activity="{{ dayObj.mon.activity }}">
+          <view class="text {{ dayObj.mon.today ? 'today' : '' }}">{{ dayObj.mon.date }}</view>
+          <view class="dot {{ dayObj.mon.activity ? 'activity' : '' }} "></view>
+        </view>
+        <view class="date" bindtap="openCalenderDrawler" data-activity="{{ dayObj.tue.activity }}">
+          <view class="text {{ dayObj.tue.today ? 'today' : '' }}">{{ dayObj.tue.date }}</view>
+          <view class="dot {{ dayObj.tue.activity ? 'activity' : '' }} "></view>
+        </view>
+        <view class="date" bindtap="openCalenderDrawler" data-activity="{{ dayObj.wed.activity }}">
+          <view class="text {{ dayObj.wed.today ? 'today' : '' }}">{{ dayObj.wed.date }}</view>
+          <view class="dot {{ dayObj.wed.activity ? 'activity' : '' }} "></view>
+        </view>
+        <view class="date" bindtap="openCalenderDrawler" data-activity="{{ dayObj.thu.activity }}">
+          <view class="text {{ dayObj.thu.today ? 'today' : '' }}">{{ dayObj.thu.date }}</view>
+          <view class="dot {{ dayObj.thu.activity ? 'activity' : '' }} "></view>
+        </view>
+        <view class="date" bindtap="openCalenderDrawler" data-activity="{{ dayObj.fri.activity }}">
+          <view class="text {{ dayObj.fri.today ? 'today' : '' }}">{{ dayObj.fri.date }}</view>
+          <view class="dot {{ dayObj.fri.activity ? 'activity' : '' }} "></view>
+        </view>
+        <view class="date weekend" bindtap="openCalenderDrawler" data-activity="{{ dayObj.sat.activity }}">
+          <view class="text {{ dayObj.sat.today ? 'today' : '' }}">{{ dayObj.sat.date }}</view>
+          <view class="dot {{ dayObj.sat.activity ? 'activity' : '' }} "></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom-placeholder"></view>
+</scroll-view>
+
+<!-- 日程抽屉 -->
+<view wx:if="{{ drawler.calendar.display && selected === 3 }}" class="calendar-drawer-mask" bindtap="closeCalenderDrawler"></view>
+<view wx:if="{{ drawler.calendar.display && selected === 3 }}" class="calendar-drawer" style="padding-bottom: {{ safeArea }}px;">
+  <view class="head">
+    <view class="icon"></view>
+    <view class="placeholder"></view>
+    <view class="title">2023年12月15日 周四</view>
+    <view class="placeholder"></view>
+    <image class="icon" bindtap="closeCalenderDrawler" src="/images/icon/home/close.png"></image>
+  </view>
+  <scroll-view class="content" show-scrollbar="{{ false }}" enhanced="{{ true }}" scroll-y="true" >
+    <view class="item" 
+      wx:for="{{ todayActivity }}" 
+      wx:key="index">
+      <image wx:if="{{ item.surface }}" class="surface" src="{{ item.surface }}"></image>
+      <view wx:else="" class="vertical-line"></view>
+      <view class="info">
+        <view class="title">{{ item.title }}</view>
+        <view class="msg default">{{ item.location }}</view>
+      </view>
+      <view class="placeholder"></view>
+      <view class="time">{{ item.time }}</view>
+      <view class="horizental-line"></view>
+    </view>
+    <view class="bottom-placeholder"></view>
+  </scroll-view>
+</view>

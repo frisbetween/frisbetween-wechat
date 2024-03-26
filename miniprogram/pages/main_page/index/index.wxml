@@ -1,0 +1,64 @@
+<view class="navigation-bar" 
+  style="padding-top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
+  <image class="avatar" 
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/images/avatar.jpg"></image>
+  <view class="nickname" 
+    style="height: {{ navigationBarHeight }}px;">
+      FrisBetween
+  </view>
+</view>
+<view class="sub-navigation-bar" style="top: {{ navigationBarHeight + statusBarHeight }}px; height: {{ subNavigationBarHeight }}pt;">
+  <view class="search-bar">
+    <image class="icon" src="/images/icon/index/search.png"></image>
+  </view>
+</view>
+<scroll-view class="container" 
+  show-scrollbar="{{ false }}" 
+  enhanced="{{ true }}" 
+  scroll-y="true"
+  style="height: calc(100vh - {{ navigationBarHeight + statusBarHeight }}px - {{ subNavigationBarHeight + 28 }}pt); margin-top: calc({{ navigationBarHeight + statusBarHeight }}px + {{ subNavigationBarHeight + 28 }}pt); padding-bottom: {{ safeArea }}px">
+  <view class="banner">
+    <view class="row row-main">
+      <image class="block block-main" mode="aspectFill" src="/images/dophing-surface.jpg"></image>
+      <image class="block" mode="aspectFill" src="/images/avatar.jpg"></image>
+    </view>
+    <view class="row">
+      <image class="block" mode="aspectFill" src="/images/avatar.jpg"></image>
+      <image class="block block-main" mode="aspectFill" src="/images/dophing-surface.jpg"></image>
+    </view>
+  </view>
+  <view class="title">
+    <view class="text">开放活动</view>
+    <view class="location">
+      <image class="icon" src="/images/icon/index/location.png"></image>
+      <view class="text">杭州</view>
+    </view>
+    <view class="placeholder"></view>
+    <image class="icon" src="/images/icon/index/more.png"></image>
+  </view>
+  <view class="activity">
+    <view class="item"
+      wx:for="{{ activity }}" 
+      wx:key="index"
+      data-id="{{ item.id }}"
+      bindtap="navigateToTrainning">
+      <image class="surface" mode="aspectFill" src="/images/dophing-surface.jpg"></image>
+      <view class="content">
+        <view class="title">{{ item.title }}</view>
+        <view class="info">
+          <image class="icon" src="/images/icon/index/time.png"></image>
+          <view class="text">{{ item.date }} · {{ item.startTime }} ~ {{ item.endTime }}</view>
+        </view>
+        <view class="info">
+          <image class="icon" src="/images/icon/index/location.png"></image>
+          <view class="text">{{ item.location }}</view>
+        </view>
+        <view class="info">
+          <image class="icon" src="{{ item.publisher.avatar }}"></image>
+          <view class="text">{{ item.publisher.name }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom-placeholder"></view>
+</scroll-view>

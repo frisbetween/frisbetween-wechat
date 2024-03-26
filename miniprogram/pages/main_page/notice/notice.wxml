@@ -1,0 +1,45 @@
+<view class="navigation-bar" 
+  style="padding-top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
+  <image class="avatar" 
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/images/avatar.jpg"></image>
+  <view class="nickname" 
+    style="height: {{ navigationBarHeight }}px;">
+      消息
+  </view>
+</view>
+<view class="sub-navigation-bar" style="top: {{ navigationBarHeight + statusBarHeight }}px; height: {{ subNavigationBarHeight }}pt;">
+</view>
+
+<scroll-view class="container" 
+  scroll-top="{{ containerScrollTop }}"
+  show-scrollbar="{{ false }}" 
+  enhanced="{{ true }}" 
+  scroll-y="true"
+  style="height: calc(100vh - {{ navigationBarHeight + statusBarHeight }}px - {{ subNavigationBarHeight }}pt); margin-top: calc({{ navigationBarHeight + statusBarHeight }}px + {{ subNavigationBarHeight }}pt); padding-bottom: {{ safeArea }}px">
+  <view class="session">
+    <view class="item" 
+      wx:for="{{ session }}" 
+      wx:key="index">
+      <image class="avatar" src="{{ item.avatar }}"></image>
+      <view class="info">
+        <view class="main">
+          <view class="title">{{ item.title }}</view>
+          <view class="tag"
+            wx:for="{{ item.tag }}" 
+            wx:for-item="tag"
+            wx:key="index">
+            {{ tag.text }}
+          </view>
+          <view class="placeholder"></view>
+          <view class="time">{{ item.time }}</view>
+        </view>
+        <view class="sub">
+          <view class="message default">{{ item.message }}</view>
+          <view class="placeholder"></view>
+          <view wx:if="{{ item.count > 0 }}" class="bedge">{{ item.count }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom-placeholder"></view>
+</scroll-view>

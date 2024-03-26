@@ -1,0 +1,98 @@
+.navigation-bar {
+  width: calc(100% - 20pt);
+  background-color: #121212;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 20pt;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  .avatar {
+    border-radius: 50%;
+  }
+  .nickname {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10pt;
+    font-size: 16pt;
+    font-weight: 800;    
+  }
+}
+
+.sub-navigation-bar {
+  position: fixed;
+  width: 100%;
+  background-color: #121212;
+  box-shadow: 0 2pt 6pt #0C0C0C;
+}
+
+.container {
+  padding-top: 20pt;
+  .session {
+    .item {
+      margin-bottom: 20pt;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .avatar {
+        width: 44pt;
+        height: 44pt;
+        margin-right: 12pt;
+        border-radius: 22pt;
+      }
+      .info {
+        flex: 1;
+        .main {
+          height: 24pt;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .title {
+            font-weight: 400;
+          }
+          .time {
+            font-size: 10pt;
+          }
+          .tag {
+            margin-left: 4pt;
+            padding: 0 4pt;
+            height: 14pt;
+            line-height: 14pt;
+            font-size: 8pt;
+            color: #121212;
+            background-color: #65D46E;
+            border-radius: 10pt;
+          }
+        }
+        .sub {
+          height: 16pt;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .message {
+            font-size: 10pt;
+          }
+          .bedge {
+            margin: 2pt;
+            font-size: 10pt;
+            height: 14pt;
+            width: 14pt;
+            background-color: #D53435;
+            color: #FFFFFF;
+            border-radius: 7pt;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  .bottom-placeholder {
+    height: 52pt;
+    width: 100%;
+  }
+}

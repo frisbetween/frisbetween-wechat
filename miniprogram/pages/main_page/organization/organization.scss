@@ -1,0 +1,134 @@
+.navigation-bar {
+  width: calc(100% - 20pt);
+  background-color: #121212;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20pt;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  .avatar {
+    border-radius: 50%;
+  }
+  .nickname {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10pt;
+    font-size: 16pt;
+    font-weight: 800;    
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      margin-left: 4pt;
+      height: 16pt;
+      width: 16pt;
+      transform: translateY(1pt);
+    }
+  }
+}
+
+.container {
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-top: 20pt;
+  .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    .icon {
+      height: 18pt;
+      width: 18pt;
+    }
+  }
+  .training {
+    height: 128pt;
+    width: 100%;
+    padding: 10pt 0 20pt 0;
+    white-space: nowrap;
+    .item {
+      display: inline-block;
+      height: 128pt;
+      margin-right: 20pt;
+      .surface {
+        border-radius: 8pt;
+        height: 128pt;
+      }
+      .info {
+        position: relative;
+        z-index: 2;
+        top: -128pt;
+        height: 112pt;
+        width: calc(100% - 16pt);
+        padding: 8pt;
+        background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.6),  rgba(18, 18, 18, 0.2), rgba(18, 18, 18, 0));
+      }
+    }
+    .item:last-child {
+      margin: 0;
+    }
+  }
+  .competition {
+    height: 128pt;
+    width: 100%;
+    padding: 10pt 0 20pt 0;
+    white-space: nowrap;
+    .item {
+      display: inline-block;
+      height: 128pt;
+      margin-right: 20pt;
+      .surface {
+        border-radius: 8pt;
+        height: 128pt;
+      }
+      .info {
+        position: absolute;
+        z-index: 2;
+        top: -128pt;
+        height: 112pt;
+        width: calc(100% - 16pt);
+        padding: 8pt;
+        background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.6),  rgba(18, 18, 18, 0.2), rgba(18, 18, 18, 0));
+      }
+    }
+    .item:last-child {
+      margin: 0;
+    }
+  }
+  .menu {
+    height: 64pt;
+    width: 100%;
+    padding: 10pt 0 20pt 0;
+    white-space: nowrap;
+    .item {
+      display: inline-block;
+      height: 64pt;
+      width: 104pt;
+      margin-right: 12pt;
+      border-radius: 8pt;
+      .content {
+        display: flex;
+        align-items: flex-start;
+        .title {
+          width: 56pt;
+          padding-left: 12pt;
+          padding-top: 4pt;
+        }
+        .icon {
+          margin-top: 20pt;
+          height: 36pt;
+          width: 36pt;
+          transform: translateX(-6pt);
+        }
+      }
+    }
+    .item:last-child {
+      margin: 0;
+    }
+  }
+}
