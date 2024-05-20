@@ -1,10 +1,10 @@
 <view class="navigation-bar" 
   style="padding-top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
   <image class="avatar" 
-    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/images/avatar.jpg"></image>
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="{{ user.avatar ? user.avatar : '/images/frisbetween.png' }}" bindtap="login"></image>
   <view class="nickname" 
-    style="height: {{ navigationBarHeight }}px;">
-      Kevinavy
+    style="height: {{ navigationBarHeight }}px;" bindtap="login">
+      {{ user.name ? user.name : '未登录' }}
   </view>
 </view>
 <view class="sub-navigation-bar" style="top: {{ navigationBarHeight + statusBarHeight }}px; height: {{ subNavigationBarHeight }}pt;">

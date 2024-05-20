@@ -23,12 +23,12 @@ Component({
         selectedIconPath: "/images/icon/tab/organization-selected.png",
         text: "俱乐部"
       }, 
-      {
-        pagePath: "/pages/main_page/notice/notice",
-        iconPath: "/images/icon/tab/notice.png",
-        selectedIconPath: "/images/icon/tab/notice-selected.png",
-        text: "消息"
-      }, 
+      // {
+      //   pagePath: "/pages/main_page/notice/notice",
+      //   iconPath: "/images/icon/tab/notice.png",
+      //   selectedIconPath: "/images/icon/tab/notice-selected.png",
+      //   text: "消息"
+      // }, 
       {
         pagePath: "/pages/main_page/home/home",
         iconPath: "/images/icon/tab/home.png",

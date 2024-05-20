@@ -47,6 +47,12 @@ Page({
         animation: 'animation: expend-eighteen 0.3s;',
       },
     ],
+    user: {
+
+    },
+
+
+
     training: [
       {
         title: '2023年12月15日的例训',
@@ -680,6 +686,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
+    const that = this
+    wx.getStorage({
+      key: "user",
+      success(res) {
+        const user = res.data
+        console.log(res.data)
+        that.setData({
+          user
+        })
+      }
+    })
+    
     this.calculateArea()
   },
 
@@ -696,7 +714,7 @@ Page({
   onShow() {
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
       this.getTabBar().setData({
-        selected: 4  //这个数字是当前页面在tabBar中list数组的索引
+        selected: 3  //这个数字是当前页面在tabBar中list数组的索引
       })
     }
   },
@@ -758,6 +776,14 @@ Page({
       navigationBarHeight: navigationBarHeight,
       capsuleMenuHeight: capsuleHeight,
       safeArea: safeArea,
+    })
+  },
+
+  login() {
+    wx.navigateTo({
+      url: '../../sub_page/login/login'
+    }).catch(e => {
+      console.log(e)
     })
   },
 

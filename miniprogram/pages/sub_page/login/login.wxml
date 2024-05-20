@@ -1,0 +1,20 @@
+<view class="container">
+  <image class="logo" src="/images/frisbetween.png"></image>
+  <view class="nickname">FrisBetween</view>
+  <view class="tab-bar">
+    <view class="tab selected">密码</view>
+    <view class="split"></view>
+    <view class="tab">验证码</view>
+  </view>
+  <view class="input-box">
+    <input class="phone"></input>
+    <input class="password" password="true"></input>
+  </view>
+  <view class="login-button">登录</view>
+  <view class="term">
+    <view class="check-box">
+      <view class="inner"></view>
+    </view>
+    已阅读并同意<span class="hightlight">《隐私政策》</span>和<span class="hightlight">《用户协议》</span>
+  </view>
+</view>

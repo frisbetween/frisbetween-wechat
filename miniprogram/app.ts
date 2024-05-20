@@ -1,17 +1,26 @@
 // app.ts
+import { post } from 'api/request';
+
 App<IAppOption>({
   globalData: {},
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
-      success: res => {
-        console.log(res.code)
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      success: async res => {
+        await post('/user/action/login', {
+          credential: res.code,
+          type: 'wechat_mini_program'
+        }).then(res => {
+          const data = res.data
+          if (!data.oAuthToken) {
+            wx.setStorage({
+              key:"user",
+              data: data
+            })
+          }
+        }).catch(error => {
+          console.error(error)
+        })
       },
     })
   },
