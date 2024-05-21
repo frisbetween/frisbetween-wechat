@@ -1,14 +1,13 @@
 <view class="container">
   <image class="logo" src="/images/frisbetween.png"></image>
   <view class="nickname">FrisBetween</view>
-  <view class="tab-bar">
-    <view class="tab selected">密码</view>
-    <view class="split"></view>
-    <view class="tab">验证码</view>
-  </view>
   <view class="input-box">
-    <input class="phone"></input>
-    <input class="password" password="true"></input>
+    <input bindinput="onPhoneInput" class="phone" placeholder="请输入手机号..."></input>
+    <input bindinput="onPasswordInput" class="password" wx:if="{{ loginType == 'password' }}" password="true" placeholder="请输入密码..."></input>
+    <view class="authcode-box" wx:if="{{ loginType == 'authcode' }}">
+      <input class="input" placeholder="请输入验证码..."></input>
+      <view class="btn">获取</view>
+    </view>
   </view>
   <view class="login-button">登录</view>
   <view class="term">
@@ -16,5 +15,10 @@
       <view class="inner"></view>
     </view>
     已阅读并同意<span class="hightlight">《隐私政策》</span>和<span class="hightlight">《用户协议》</span>
+  </view>
+  <view class="tab-bar">
+    <view class="tab {{ loginType == 'password' ? 'selected' : ''}}" bind:tap="changeLoginType" data-type="password">密码</view>
+    <view class="split"></view>
+    <view class="tab {{ loginType == 'authcode' ? 'selected' : ''}}" bind:tap="changeLoginType" data-type="authcode">验证码</view>
   </view>
 </view>

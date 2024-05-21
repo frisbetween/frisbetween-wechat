@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    loginType: 'password',
+    phone: '',
+    password: ''
   },
 
   /**
@@ -62,5 +64,24 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  changeLoginType(e: any) {
+    const data = e.currentTarget.dataset
+    this.setData({
+      loginType: data.type
+    })
+  },
+
+  onPhoneInput(e: any) {
+    this.setData({
+      phone: e.detail.value
+    })
+  },
+
+  onPasswordInput(e: any) {
+    this.setData({
+      password: e.detail.value
+    })
+  },
 })
