@@ -8,7 +8,8 @@
     "pages/sub_page/competition/competition",
     "pages/sub_page/training/training",
     "pages/sub_page/map/map",
-    "pages/sub_page/login/login"
+    "pages/sub_page/login/login",
+    "pages/sub_page/user/user"
   ],
   "tabBar": {
     "custom": true,

@@ -1,4 +1,6 @@
 // pages/home/home.ts
+import * as userModule from '../../../data/module/user/index'
+import User from '../../../data/module/user/type/User'
 Page({
 
   /**
@@ -47,9 +49,7 @@ Page({
         animation: 'animation: expend-eighteen 0.3s;',
       },
     ],
-    user: {
-
-    },
+    user: undefined,
 
 
 
@@ -686,18 +686,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-    const that = this
-    wx.getStorage({
-      key: "user",
-      success(res) {
-        const user = res.data
-        console.log(res.data)
-        that.setData({
-          user
-        })
-      }
-    })
-    
     this.calculateArea()
   },
 
@@ -717,6 +705,10 @@ Page({
         selected: 3  //这个数字是当前页面在tabBar中list数组的索引
       })
     }
+
+    this.setData({
+      user: userModule.getUser()
+    })
   },
 
   /**
@@ -758,7 +750,6 @@ Page({
     // 获取系统信息
     const systemInfo = wx.getSystemInfoSync();
     const capsuleMenuInfo = wx.getMenuButtonBoundingClientRect()
-    console.log(systemInfo)
     // 获取状态栏高度
     const statusBarHeight = systemInfo.statusBarHeight;
     // 获取导航栏高度
@@ -780,11 +771,19 @@ Page({
   },
 
   login() {
-    wx.navigateTo({
-      url: '../../sub_page/login/login'
-    }).catch(e => {
-      console.log(e)
-    })
+    if (!this.data.user) {
+      wx.navigateTo({
+        url: '../../sub_page/login/login'
+      }).catch(e => {
+        console.log(e)
+      })
+    } else {
+      wx.navigateTo({
+        url: '../../sub_page/user/user'
+      }).catch(e => {
+        console.log(e)
+      })
+    }
   },
 
   onTagButtonTap(e: any) {

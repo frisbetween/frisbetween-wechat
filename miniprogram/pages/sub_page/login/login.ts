@@ -1,13 +1,16 @@
 // pages/sub_page/login/login.ts
+import * as userModule from '../../../data/module/user/index'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    loginType: 'password',
+    loginType: 'auth_code',
     phone: '',
-    password: ''
+    password: '',
+    authCode: '',
   },
 
   /**
@@ -84,4 +87,25 @@ Page({
       password: e.detail.value
     })
   },
+
+  onAuthCodeInput(e: any) {
+    this.setData({
+      authCode: e.detail.value
+    })
+  },
+
+  login() {
+    if (this.data.loginType == 'auth_code') {
+      if (!this.data.phone || this.data.authCode)
+        userModule.login(
+          {
+            region: '+86',
+            number: this.data.phone
+          },
+          this.data.authCode
+        )
+
+        wx.navigateBack()
+    }
+  }
 })

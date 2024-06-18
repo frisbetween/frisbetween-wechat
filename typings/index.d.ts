@@ -1,9 +1,12 @@
 /// <reference path="./types/index.d.ts" />
 
-interface IAppOption {
+import User from "../miniprogram/data/module/user/type/User";
+
+export interface IAppOption {
   globalData: {
-    userInfo?: WechatMiniprogram.UserInfo,
-    user?: Auth.User
+    user?: User
+    token?: string
+    refreshToken?: string
   }
   userInfoReadyCallback?: WechatMiniprogram.GetUserInfoSuccessCallback,
 }
