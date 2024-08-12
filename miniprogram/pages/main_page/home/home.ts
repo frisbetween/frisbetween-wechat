@@ -1,6 +1,6 @@
 // pages/home/home.ts
 import * as userModule from '../../../data/module/user/index'
-import User from '../../../data/module/user/type/User'
+
 Page({
 
   /**
@@ -49,7 +49,7 @@ Page({
         animation: 'animation: expend-eighteen 0.3s;',
       },
     ],
-    user: undefined,
+    user: {},
 
 
 

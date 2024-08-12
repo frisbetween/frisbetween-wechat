@@ -96,7 +96,7 @@ Page({
 
   login() {
     if (this.data.loginType == 'auth_code') {
-      if (!this.data.phone || this.data.authCode)
+      if (this.data.phone && this.data.authCode) {
         userModule.login(
           {
             region: '+86',
@@ -106,6 +106,19 @@ Page({
         )
 
         wx.navigateBack()
+      }
+    } else if (this.data.loginType == 'password') {
+      if (!this.data.phone && this.data.authCode) {
+        userModule.login(
+          {
+            region: '+86',
+            number: this.data.phone
+          },
+          this.data.password
+        )
+
+        wx.navigateBack()
+      }
     }
   }
 })

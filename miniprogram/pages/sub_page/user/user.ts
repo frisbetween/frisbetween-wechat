@@ -1,11 +1,18 @@
 // pages/sub_page/user/user.ts
+import * as userModule from '../../../data/module/user/index'
+import * as util from '../../../utils/util'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    user: {},
+    phone: '',
+    drawler: {
+      display: false
+    }
   },
 
   /**
@@ -26,7 +33,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.setData({
+      user: userModule.getUser(),
+      phone: util.maskPhoneNumber(userModule.getUser().phone.number)
+    })
   },
 
   /**
@@ -62,5 +72,21 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  openDrawler(e: any) {
+    const that = this
+    this.data.drawler.display = true
+    this.setData({
+      drawler: that.data.drawler
+    })
+  },
+
+  closeDrawler(e: any) {
+    const that = this
+    this.data.drawler.display = false
+    this.setData({
+      drawler: that.data.drawler
+    })
+  },
 })
