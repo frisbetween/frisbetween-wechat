@@ -1,0 +1,18 @@
+<!--components/editor/line-editor/LineEditor.wxml-->
+<view class="editor" bind:tap="onTap">
+  <view class="label">
+    <slot></slot>
+  </view>
+  <view class="value">{{ value }}</view>
+  <image class="icon" src="/images/icon/components/line-editor/right.png"></image>
+</view>
+
+<view wx:if="{{ drawler.display }}" class="drawer-mask" bindtap="closeDrawler"></view>
+<view wx:if="{{ drawler.display }}" class="drawer">
+  <div class="options">
+    <div class="option" bind:tap="closeDrawler">取消</div>
+    <div class="placeholder"></div>
+    <div class="option">保存</div>
+  </div>
+  <input bindinput="onInput" class="input" value="{{ value }}"></input>
+</view>

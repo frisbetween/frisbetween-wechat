@@ -1,0 +1,59 @@
+/* components/editor/line-editor/LineEditor.wxss */
+.editor {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 16pt;
+
+  .value {
+    flex: 1;
+    text-align: right;
+  }
+
+  .icon {
+    height: 16pt;
+    width: 16pt;
+    transform: translate(8pt);
+  }
+}
+
+.drawer-mask {
+  width: 100vh;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.drawer {
+  animation: drawler-slide-up 0.1s;
+  width: calc(100% - 40pt);
+  height: 240pt;
+  position: fixed;
+  bottom: 0pt;
+  z-index: 999;
+  background-color: #121212;
+  border-radius: 12pt 12pt 0 0;
+  padding: 0 20pt;
+  box-shadow: 0 -6pt 6pt #0C0C0C;
+
+  .options {
+    height: 40pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info {
+    .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 16pt;
+    }
+
+    input {
+      width: calc(100% - 42pt);
+      transform: translateY(1pt);
+    }
+  }
+}

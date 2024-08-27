@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "LineEditor": "/components/editor/line-editor/LineEditor"
+  },
   "navigationBarTitleText": "个人信息",
   "navigationBarBackgroundColor": "#121212"
 }
