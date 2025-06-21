@@ -1,12 +1,16 @@
-<view class="navigation-bar" 
+<!-- 头部 -->
+<view class="head" 
   style="padding-top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
   <image class="avatar" 
-    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="{{ user.avatar ? user.avatar : '/images/frisbetween.png' }}" bindtap="login"></image>
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="{{ user.avatar ? user.avatar : '/assets/frisbetween.png' }}" bindtap="login"></image>
   <view class="nickname" 
     style="height: {{ navigationBarHeight }}px;" bindtap="login">
       {{ user.nickname ? user.nickname : '未登录' }}
   </view>
 </view>
+
+
+
 <view class="sub-navigation-bar" style="top: {{ navigationBarHeight + statusBarHeight }}px; height: {{ subNavigationBarHeight }}pt;">
   <view class="tag-button {{ selected === item.index ? 'button-selected' : ''}}"
     wx:for="{{ tagButton }}" 
@@ -34,7 +38,7 @@
     wx:if="{{ selected === 0 }}">
     <view class="sort">
       <image class="icon" 
-      src="{{ sort === 1 ? '/images/icon/home/desc.png' : '/images/icon/home/asc.png' }}"></image>
+      src="{{ sort === 1 ? '/assets/icon/home/desc.png' : '/assets/icon/home/asc.png' }}"></image>
       {{ sort === 1 ? '时间倒序' : '时间升序' }}
     </view>
     <view class="item" 
@@ -52,7 +56,7 @@
     wx:if="{{ selected === 1 }}">
     <view class="sort">
       <image class="icon" 
-      src="{{ sort === 1 ? '/images/icon/home/desc.png' : '/images/icon/home/asc.png' }}"></image>
+      src="{{ sort === 1 ? '/assets/icon/home/desc.png' : '/assets/icon/home/asc.png' }}"></image>
       {{ sort === 1 ? '时间倒序' : '时间升序' }}
     </view>
     <view class="item" 
@@ -129,7 +133,7 @@
     <view class="placeholder"></view>
     <view class="title">2023年12月15日 周四</view>
     <view class="placeholder"></view>
-    <image class="icon" bindtap="closeCalenderDrawler" src="/images/icon/home/close.png"></image>
+    <image class="icon" bindtap="closeCalenderDrawler" src="/assets/icon/home/close.png"></image>
   </view>
   <scroll-view class="content" show-scrollbar="{{ false }}" enhanced="{{ true }}" scroll-y="true" >
     <view class="item" 

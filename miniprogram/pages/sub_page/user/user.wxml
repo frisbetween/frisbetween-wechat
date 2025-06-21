@@ -1,10 +1,10 @@
 <view class="container">
   <view class="user">
     <view class="info">
-      <image class="avatar" src="/images/frisbetween.png"></image>
+      <image class="avatar" src="/assets/frisbetween.png"></image>
       <view class="nickname">{{ user.nickname }}</view>
       <view class="placeholder"></view>
-      <image class="icon" src="/images/icon/user/right.png" bind:tap="openDrawler"></image>
+      <image class="icon" src="/assets/icon/user/right.png" bind:tap="openDrawler"></image>
     </view>
     <view class="tags">
       <view class="tag">{{ user.gender == 'male' ? '男 Male' : '女 Female'}}</view>

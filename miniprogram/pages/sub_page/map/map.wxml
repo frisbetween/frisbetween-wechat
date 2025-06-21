@@ -2,7 +2,7 @@
   <view class="button" 
   style="height: {{ capsuleMenuHeight }}px; width: {{ capsuleMenuHeight }}px;"
   bindtap="navigateBack">
-    <image class="icon" src="/images/icon/map/back.png"></image>
+    <image class="icon" src="/assets/icon/map/back.png"></image>
   </view>
 </view>
 <view class="map">

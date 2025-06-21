@@ -1,7 +1,7 @@
 <view class="navigation-bar" 
   style="padding-top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
   <image class="avatar" 
-    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/images/avatar.jpg"></image>
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/assets/avatar.jpg"></image>
   <view class="nickname" 
     style="height: {{ navigationBarHeight }}px;">
       消息

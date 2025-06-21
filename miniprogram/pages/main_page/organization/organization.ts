@@ -11,19 +11,19 @@ Page({
     training: [
       {
         title: '第三次训练',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '8.13',
         startTime: '16:00'
       },
       {
         title: '第二次训练',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '8.12',
         startTime: '16:00'
       },
       {
         title: 'Tryout',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '8.11',
         startTime: '16:00'
       }
@@ -31,21 +31,21 @@ Page({
     competition: [
       {
         title: '多飞邀请赛',
-        surface: '/images/dophing-surface.jpg',
+        surface: '/assets/dophing-surface.jpg',
         startDate: '8.13',
         endDate: '8.15',
         location: '上海'
       },
       {
         title: '第二次训练',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         startDate: '8.13',
         endDate: '8.15',
         location: '浙江 · 杭州'
       },
       {
         title: '第一次训练',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         startDate: '8.13',
         endDate: '8.15',
         location: '浙江 · 杭州'
@@ -55,17 +55,17 @@ Page({
       {
         title: '考勤统计',
         background: '#D63435',
-        icon: '/images/icon/organization/attendance.png'
+        icon: '/assets/icon/organization/attendance.png'
       },
       {
         title: '队训请假',
         background: '#223261',
-        icon: '/images/icon/organization/heart.png'
+        icon: '/assets/icon/organization/heart.png'
       },
       {
         title: '体能打卡',
         background: '#AF5E22',
-        icon: '/images/icon/organization/sport.png'
+        icon: '/assets/icon/organization/sport.png'
       }
     ]
 

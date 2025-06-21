@@ -12,56 +12,56 @@ Page({
     competition: [
       {
         title: '上海多飞秋分飞盘邀请赛',
-        surface: '/images/dophing-surface.jpg',
+        surface: '/assets/dophing-surface.jpg',
         startDate: '2023.9.23',
         endDate: '2023.9.24',
         province: '上海市',
         city: '',
         location: '张杨北路2700号',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '多飞极限飞盘俱乐部'
         },
         type: 1
       },
       {
         title: '上海多飞秋分飞盘邀请赛',
-        surface: '/images/dophing-surface.jpg',
+        surface: '/assets/dophing-surface.jpg',
         startDate: '2023.9.23',
         endDate: '2023.9.24',
         province: '上海市',
         city: '',
         location: '张杨北路2700号',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '多飞极限飞盘俱乐部'
         },
         type: 2
       },
       {
         title: '上海多飞秋分飞盘邀请赛',
-        surface: '/images/dophing-surface.jpg',
+        surface: '/assets/dophing-surface.jpg',
         startDate: '2023.9.23',
         endDate: '2023.9.24',
         province: '上海市',
         city: '',
         location: '张杨北路2700号',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '多飞极限飞盘俱乐部'
         },
         type: 3
       },
       {
         title: '上海多飞秋分飞盘邀请赛',
-        surface: '/images/dophing-surface.jpg',
+        surface: '/assets/dophing-surface.jpg',
         startDate: '2023.9.23',
         endDate: '2023.9.24',
         province: '上海市',
         city: '',
         location: '张杨北路2700号',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '多飞极限飞盘俱乐部'
         },
         type: 4

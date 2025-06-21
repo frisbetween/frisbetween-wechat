@@ -1,5 +1,5 @@
 // utils/request.ts
-const endpoint = 'http://10.1.13.229:8888';
+const endpoint = 'http://10.1.13.229:32010';
 // const endpoint = 'http://192.168.31.151:8888'
 
 interface RequestOptions {

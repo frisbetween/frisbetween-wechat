@@ -1,6 +1,6 @@
 // app.ts
 import type { IAppOption } from '../typings/index'
-import User from './data/module/user/type/User'
+import User from './service/module/user/type/User'
 
 App<IAppOption>({
   globalData: {

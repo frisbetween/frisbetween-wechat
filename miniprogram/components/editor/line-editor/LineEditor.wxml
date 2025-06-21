@@ -4,7 +4,7 @@
     <slot></slot>
   </view>
   <view class="value">{{ value }}</view>
-  <image class="icon" src="/images/icon/components/line-editor/right.png"></image>
+  <image class="icon" src="/assets/icon/components/line-editor/right.png"></image>
 </view>
 
 <view wx:if="{{ drawler.display }}" class="drawer-mask" bindtap="closeDrawler"></view>

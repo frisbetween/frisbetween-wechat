@@ -1,5 +1,5 @@
 // pages/sub_page/login/login.ts
-import * as userModule from '../../../data/module/user/index'
+import * as userModule from '../../../service/module/user/index'
 
 Page({
 

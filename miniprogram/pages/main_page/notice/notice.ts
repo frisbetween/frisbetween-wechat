@@ -12,14 +12,14 @@ Page({
     subNavigationBarHeight: 8,
     session: [
       {
-        avatar: '/images/avatar.jpg',
+        avatar: '/assets/avatar.jpg',
         title: 'Kevinavy',
         message: '在吗？',
         time: '昨天',
         count: 2
       },
       {
-        avatar: '/images/avatar.jpg',
+        avatar: '/assets/avatar.jpg',
         title: '龙井虾仁',
         message: '邀请你参加上海公开赛',
         time: '12月7日',

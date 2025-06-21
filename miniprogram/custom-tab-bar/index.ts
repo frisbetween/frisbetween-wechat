@@ -7,32 +7,32 @@ Component({
     menu: [
       {
         pagePath: "/pages/main_page/index/index",
-        iconPath: "/images/icon/tab/index.png",
-        selectedIconPath: "/images/icon/tab/index-selected.png",
+        iconPath: "/assets/icon/tab/index.png",
+        selectedIconPath: "/assets/icon/tab/index-selected.png",
         text: "广场"
       }, 
       {
         pagePath: "/pages/main_page/competition/competition",
-        iconPath: "/images/icon/tab/competition.png",
-        selectedIconPath: "/images/icon/tab/competition-selected.png",
+        iconPath: "/assets/icon/tab/competition.png",
+        selectedIconPath: "/assets/icon/tab/competition-selected.png",
         text: "赛事"
       }, 
       {
         pagePath: "/pages/main_page/organization/organization",
-        iconPath: "/images/icon/tab/organization.png",
-        selectedIconPath: "/images/icon/tab/organization-selected.png",
+        iconPath: "/assets/icon/tab/organization.png",
+        selectedIconPath: "/assets/icon/tab/organization-selected.png",
         text: "俱乐部"
       }, 
       // {
       //   pagePath: "/pages/main_page/notice/notice",
-      //   iconPath: "/images/icon/tab/notice.png",
-      //   selectedIconPath: "/images/icon/tab/notice-selected.png",
+      //   iconPath: "/assets/icon/tab/notice.png",
+      //   selectedIconPath: "/assets/icon/tab/notice-selected.png",
       //   text: "消息"
       // }, 
       {
-        pagePath: "/pages/main_page/home/home",
-        iconPath: "/images/icon/tab/home.png",
-        selectedIconPath: "/images/icon/tab/home-selected.png",
+        pagePath: "/pages/home/home",
+        iconPath: "/assets/icon/tab/home.png",
+        selectedIconPath: "/assets/icon/tab/home-selected.png",
         text: "个人中心"
       }
     ]

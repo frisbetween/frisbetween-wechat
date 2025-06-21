@@ -1,5 +1,5 @@
 // pages/home/home.ts
-import * as userModule from '../../../data/module/user/index'
+import * as userModule from '../../service/module/user/index'
 
 Page({
 
@@ -43,8 +43,8 @@ Page({
     iconButton: [
       {
         index: 3,
-        iconPath: '/images/icon/home/calendar.png',
-        selectedIconPath: '/images/icon/home/calendar-selected.png',
+        iconPath: '/assets/icon/home/calendar.png',
+        selectedIconPath: '/assets/icon/home/calendar-selected.png',
         translateX: 'transform: translateX(-18px);',
         animation: 'animation: expend-eighteen 0.3s;',
       },
@@ -56,7 +56,7 @@ Page({
     training: [
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -64,7 +64,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -72,7 +72,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -80,7 +80,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -88,7 +88,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -96,7 +96,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -104,7 +104,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -112,7 +112,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -120,7 +120,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -128,7 +128,7 @@ Page({
       },
       {
         title: '2023年12月15日的例训last',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         date: '2023.12.15',
         startTime: '19:00',
         endTime: '21:00',
@@ -138,7 +138,7 @@ Page({
     competition: [
       {
         title: '上海多飞秋分飞盘邀请赛',
-        surface: '/images/dophing-surface.jpg',
+        surface: '/assets/dophing-surface.jpg',
         startDate: '2023.9.23',
         endDate: '2023.9.24',
         province: '上海市',
@@ -147,7 +147,7 @@ Page({
       },
       {
         title: '上海多飞秋分飞盘邀请赛',
-        surface: '/images/dophing-surface.jpg',
+        surface: '/assets/dophing-surface.jpg',
         startDate: '2023.9.23',
         endDate: '2023.9.24',
         province: '上海市',
@@ -626,7 +626,7 @@ Page({
     todayActivity: [
       {
         title: '2023年12月15日的例训last',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         time: '15:00',
         location: '浙江大学紫金港校区'
       },
@@ -650,19 +650,19 @@ Page({
       },
       {
         title: '2023年12月15日的例训last',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         time: '19:00',
         location: '浙江大学紫金港校区'
       },
       {
         title: '2023年12月15日的例训last',
-        surface: '/images/avatar.jpg',
+        surface: '/assets/avatar.jpg',
         time: '20:00',
         location: '浙江大学紫金港校区'
       },
       {
         title: '杭州多飞秋分飞盘邀请赛',
-        surface: '/images/dophing-surface.jpg',
+        surface: '/assets/dophing-surface.jpg',
         time: '21:00',
         location: '浙江省 · 杭州市 · 张杨北路2700号'
       },
@@ -747,20 +747,7 @@ Page({
   },
 
   calculateArea() {
-    // 获取系统信息
-    const systemInfo = wx.getSystemInfoSync();
-    const capsuleMenuInfo = wx.getMenuButtonBoundingClientRect()
-    // 获取状态栏高度
-    const statusBarHeight = systemInfo.statusBarHeight;
-    // 获取导航栏高度
-    const navigationBarHeight = (capsuleMenuInfo.top - statusBarHeight) * 2 + capsuleMenuInfo.height
-    const capsuleHeight = capsuleMenuInfo.height
-
-    // 计算底部安全区
-    let safeArea = systemInfo.screenHeight - systemInfo.safeArea.bottom
-    if (safeArea < 16) {
-      safeArea = 16
-    }
+    
 
     this.setData({
       statusBarHeight: statusBarHeight,

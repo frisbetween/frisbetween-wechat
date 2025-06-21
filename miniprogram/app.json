@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/main_page/index/index",
+    "pages/index/index",
     "pages/main_page/competition/competition",
     "pages/main_page/organization/organization",
     "pages/main_page/notice/notice",
-    "pages/main_page/home/home",
+    "pages/home/home",
     "pages/sub_page/competition/competition",
     "pages/sub_page/training/training",
     "pages/sub_page/map/map",
@@ -15,7 +15,7 @@
     "custom": true,
     "list": [
       {
-        "pagePath": "pages/main_page/index/index",
+        "pagePath": "pages/index/index",
         "text": "广场"
       },
       {
@@ -31,7 +31,7 @@
         "text": "消息"
       },
       {
-        "pagePath": "pages/main_page/home/home",
+        "pagePath": "pages/home/home",
         "text": "个人中心"
       }
     ]

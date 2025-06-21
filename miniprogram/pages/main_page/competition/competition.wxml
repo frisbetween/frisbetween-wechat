@@ -1,7 +1,7 @@
 <view class="navigation-bar" 
   style="padding-top: {{ statusBarHeight }}px; height: {{ navigationBarHeight }}px;">
   <image class="avatar" 
-    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/images/avatar.jpg"></image>
+    style="width: {{ navigationBarHeight }}px; height: {{ navigationBarHeight }}px;" src="/assets/avatar.jpg"></image>
   <view class="nickname" 
     style="height: {{ navigationBarHeight }}px;">
       赛事
@@ -9,7 +9,7 @@
 </view>
 <view class="sub-navigation-bar" style="top: {{ navigationBarHeight + statusBarHeight }}px; height: {{ subNavigationBarHeight }}pt;">
   <view class="search-bar">
-    <image class="icon" src="/images/icon/index/search.png"></image>
+    <image class="icon" src="/assets/icon/index/search.png"></image>
   </view>
 </view>
 <scroll-view id="container" class="container" 
@@ -17,31 +17,31 @@
   enhanced="{{ true }}" 
   scroll-y="true"
   style="height: calc(100vh - {{ navigationBarHeight + statusBarHeight }}px - {{ subNavigationBarHeight + 28 }}pt); margin-top: calc({{ navigationBarHeight + statusBarHeight }}px + {{ subNavigationBarHeight + 28 }}pt); padding-bottom: {{ safeArea }}px">
-  <image class="field" src="/images/field.png">
+  <image class="field" src="/assets/field.png">
     <!-- <view class="surface"></view> -->
   </image>
   <view class="menu">
     <view class="item">
       <view class="text">快速比赛</view>
-      <image class="icon" src="/images/icon/competition/quick_start.png"></image>
+      <image class="icon" src="/assets/icon/competition/quick_start.png"></image>
     </view>
     <view style="background-color: #223261;" class="item">
       <view class="text">赛事发布</view>
-      <image class="icon" src="/images/icon/competition/start.png"></image>
+      <image class="icon" src="/assets/icon/competition/start.png"></image>
     </view>
     <view style="background-color: #AF5E22;" class="item">
       <view class="text">比赛记录</view>
-      <image style="height: 22pt; width: 22pt; padding: 1pt;" class="icon" src="/images/icon/competition/history.png"></image>
+      <image style="height: 22pt; width: 22pt; padding: 1pt;" class="icon" src="/assets/icon/competition/history.png"></image>
     </view>
   </view>
   <view class="title">
     <view class="text">近期赛事</view>
     <view class="location">
-      <image class="icon" src="/images/icon/index/location.png"></image>
+      <image class="icon" src="/assets/icon/index/location.png"></image>
       <view class="text">杭州</view>
     </view>
     <view class="placeholder"></view>
-    <image class="icon" src="/images/icon/index/more.png"></image>
+    <image class="icon" src="/assets/icon/index/more.png"></image>
   </view>
   <view class="competition">
     <view class="item" 
@@ -58,11 +58,11 @@
           <view wx:if="{{ item.type === 4 }}" class="tag">皮卡·PickUp</view>
         </view>
         <view class="msg default">
-          <image class="icon" src="/images/icon/index/time.png"></image>
+          <image class="icon" src="/assets/icon/index/time.png"></image>
           {{ item.startDate }} - {{ item.endDate }}
         </view>
         <view class="msg default">
-          <image class="icon" src="/images/icon/index/location.png"></image>
+          <image class="icon" src="/assets/icon/index/location.png"></image>
           {{ item.province + (item.city ? ' · ' + item.city : '' ) + (item.location ? ' · ' + item.location : '') }}
         </view>
         <view class="msg default">

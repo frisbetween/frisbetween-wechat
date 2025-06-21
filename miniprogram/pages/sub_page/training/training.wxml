@@ -10,7 +10,7 @@
   </view>
   <view class="map">
     <view class="button">
-      <image class="icon" src="/images/icon/training/expend.png" bindtap="navigateToMap"></image>
+      <image class="icon" src="/assets/icon/training/expend.png" bindtap="navigateToMap"></image>
     </view>
     <!-- <map id="map" scale="14" show-location="true" ></map> -->
     <map id="map" 
@@ -32,16 +32,16 @@
   <view class="description">
     <view class="placeholder"></view>
     <view class="content">
-      <image class="icon" src="/images/icon/training/pin.png"></image>
+      <image class="icon" src="/assets/icon/training/pin.png"></image>
       训练地点在计量东操场🎄 平安夜满足下沙男大心愿
     </view>
   </view>
   <view class="plan">
     <view class="placeholder"></view>
     <view class="content">
-      <image class="icon" src="/images/icon/training/pin.png"></image>
+      <image class="icon" src="/assets/icon/training/pin.png"></image>
       <view class="file">
-        <image class="surface" src="/images/icon/training/word_file.png"></image>
+        <image class="surface" src="/assets/icon/training/word_file.png"></image>
         <view class="text">训练计划.docx</view>
       </view>
     </view>
@@ -49,20 +49,20 @@
   <view style="height: 48pt;" class="space-splite"></view>
   <view class="title">
     <view class="text">参训人员</view>
-    <image class="icon" src="/images/icon/training/female.png"></image>
+    <image class="icon" src="/assets/icon/training/female.png"></image>
     <view class="text">12</view>
-    <image class="icon" src="/images/icon/training/male.png"></image>
+    <image class="icon" src="/assets/icon/training/male.png"></image>
     <view class="text">12</view>
   </view>
   <view class="participant">
     <view class="person">
-      <image class="avatar" src="/images/avatar.jpg"></image>
+      <image class="avatar" src="/assets/avatar.jpg"></image>
       <view class="name">Kevinavy</view>
       <view class="tag">正式队员</view>
       <view class="tag">Line Black</view>
     </view>
     <view class="person">
-      <image class="avatar" src="/images/avatar.jpg"></image>
+      <image class="avatar" src="/assets/avatar.jpg"></image>
       <view class="name">Kevinavy</view>
       <view class="tag">跟训队员</view>
       <view class="tag">Line White</view>
@@ -74,7 +74,7 @@
   <view class="comment">
     <view class="item">
         <view class="message">
-            <image class="avatar" src="/images/avatar.jpg"></image>
+            <image class="avatar" src="/assets/avatar.jpg"></image>
             <view class="content">
                 <view class="name">Kevinavy</view>
                 <view class="text">打的不错</view>
@@ -88,12 +88,12 @@
                 <view class="name" style="text-align: right;">Kevinavy</view>
                 <view class="text">打的不错打的不错打的不错打的不错打的不错打的不错打的不错打的不错打的不错</view>
             </view>
-            <image class="avatar" src="/images/avatar.jpg"></image>
+            <image class="avatar" src="/assets/avatar.jpg"></image>
         </view>
     </view>
     <view class="item">
         <view class="message">
-            <image class="avatar" src="/images/avatar.jpg"></image>
+            <image class="avatar" src="/assets/avatar.jpg"></image>
             <view class="content">
                 <view class="name">Kevinavy</view>
                 <view class="text">打的不错打的不错打的不错打的不错打的不错打的不错打的不错打的不错打的不错</view>
@@ -103,21 +103,21 @@
     <view class="send-bar">
         <input class="input"></input>
         <view class="button">
-            <image class="icon" src="/images/icon/training/send.png"></image>
+            <image class="icon" src="/assets/icon/training/send.png"></image>
         </view>
     </view>
   </view>
   <view class="button-bar" style="bottom: {{ safeArea }}px;">
     <view class="button">
-        <image class="icon" src="/images/icon/training/info.png"></image>
+        <image class="icon" src="/assets/icon/training/info.png"></image>
         <view class="text">帮助</view>
     </view>
     <view class="button">
-        <image class="icon" src="/images/icon/training/share.png"></image>
+        <image class="icon" src="/assets/icon/training/share.png"></image>
         <view class="text">分享</view>
     </view>
     <view class="button">
-        <image class="icon" src="/images/icon/training/audit.png"></image>
+        <image class="icon" src="/assets/icon/training/audit.png"></image>
         <view class="text">请假</view>
     </view>
     <view class="placeholder"></view>

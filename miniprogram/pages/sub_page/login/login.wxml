@@ -1,5 +1,5 @@
 <view class="container">
-  <image class="logo" src="/images/frisbetween.png"></image>
+  <image class="logo" src="/assets/frisbetween.png"></image>
   <view class="nickname">FrisBetween</view>
   <view class="input-box">
     <input bindinput="onPhoneInput" class="phone" placeholder="请输入手机号..."></input>

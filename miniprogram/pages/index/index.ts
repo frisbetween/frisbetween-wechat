@@ -19,7 +19,7 @@ Page({
         endTime: '11:00',
         location: '云上足球公园',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '龙井虾仁'
         }
       },
@@ -31,7 +31,7 @@ Page({
         endTime: '11:00',
         location: '云上足球公园',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '龙井虾仁'
         }
       },
@@ -43,7 +43,7 @@ Page({
         endTime: '11:00',
         location: '云上足球公园',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '龙井虾仁'
         }
       },
@@ -55,7 +55,7 @@ Page({
         endTime: '11:00',
         location: '云上足球公园',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '龙井虾仁'
         }
       },
@@ -67,7 +67,7 @@ Page({
         endTime: '11:00',
         location: '云上足球公园',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '龙井虾仁'
         }
       },
@@ -79,7 +79,7 @@ Page({
         endTime: '11:00',
         location: '云上足球公园',
         publisher: {
-          avatar: '/images/avatar.jpg',
+          avatar: '/assets/avatar.jpg',
           name: '龙井虾仁'
         }
       }
